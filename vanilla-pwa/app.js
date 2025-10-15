@@ -1,0 +1,1 @@
+// Placeholder app.js (your PWA logic lives in index.html script)
