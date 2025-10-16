@@ -38,7 +38,7 @@ API endpoints:
 - `GET /api/v1/metrics/nights`
 - `GET /api/v1/journal`
 
-You can point any front-end to `http://localhost:8000` (CORS is allowed).
+Website `https://phionanamugga.github.io/neurosleep_monorepo/` (CORS is allowed).
 
 ## Notes
 - Your original app is preserved in **vanilla-pwa/**; nothing is changed.
