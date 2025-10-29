@@ -1,8 +1,13 @@
-from django.urls import path
-from .views import last_night, nights, journal
+# sleep/urls.py
+
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import SleepSessionViewSet, JournalEntryViewSet
+
+router = DefaultRouter()
+router.register(r'sleep-sessions', SleepSessionViewSet, basename='sleep-session')
+router.register(r'journal-entries', JournalEntryViewSet, basename='journal-entry')
 
 urlpatterns = [
-    path("metrics/last-night", last_night),
-    path("metrics/nights", nights),
-    path("journal", journal),
+    path('', include(router.urls)),
 ]
