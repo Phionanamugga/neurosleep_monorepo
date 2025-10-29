@@ -6,25 +6,42 @@
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
-      "architect": {
+      "prefix": "app",
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/neurosleep-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [],
-            "tsConfig": "tsconfig.json"
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "all"
+            }
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "neurosleep-angular:build"
+            "buildTarget": "neurosleep-angular:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "neurosleep-angular:build:production"
+            }
           }
         }
       }
     }
   },
-  "defaultProject": "neurosleep-angular"
+  "defaultProject": "neurosleep-angular",
+  "cli": {
+    "analytics": false
+  }
 }
