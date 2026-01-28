@@ -1,12 +1,14 @@
 # NeuroSleep
-This archive includes:
-- **vanilla-pwa/** — your original app **unchanged** (index.html, manifest.json, service-worker.js).
+## About:
+This is a sleep tracking app that helps users calculate their sleep debt, advises them on how to compensate it by calculating time spent on their past, current & future activities.
+
+## File strucutre:
+- **vanilla-pwa/** — Original app (index.html, manifest.json, service-worker.js).
 - **react-app/** — minimal React + TypeScript app scaffold.
 - **angular-app/** — minimal Angular app scaffold.
 - **backend-django/** — Django API with CORS enabled (mock endpoints).
 
-## Quick Start
-
+## Technologies & getting started:
 ### Vanilla PWA (no build step)
 1. Serve `vanilla-pwa/` with any static server (or open `index.html`).
 2. Make sure to serve over HTTP(s) for service worker to work (localhost is fine).
@@ -33,14 +35,23 @@ pip install -r requirements.txt
 python manage.py runserver 0.0.0.0:8000
 ```
 
-API endpoints:
+## API endpoints:
 - `GET /api/v1/metrics/last-night`
 - `GET /api/v1/metrics/nights`
 - `GET /api/v1/journal`
 
 Website `https://phionanamugga.github.io/neurosleep_monorepo/` (CORS is allowed).
 
-## Notes
-- Your original app is preserved in **vanilla-pwa/**; nothing is changed.
-- The React and Angular apps are simple starting points. You can integrate the PWA UI later if you wish.
-- The Django backend returns mock JSON compatible with your UI's data model.
+## Contributing
+This is an open source project and contributuions are welcome:
+1. Fork the project
+2. Create your feature branch(git checkout -b feature1)
+3. Commit your changes(git commit -m 'Creates readme')
+4. Push to branch(git push origin feature1)
+5. Open a pull request
+
+## License
+MIT License
+
+## Contact
+Your Name - @phionanamugga23@gmail.com  
